@@ -21,11 +21,10 @@ function game(){
     for(let i=0; i<5; i++) {
         let compPlay = ['rock', 'scissors', 'paper'];
         computerSelection = compPlay[Math.floor(Math.random() * compPlay.length)];
-        
-        console.log(computerSelection);
         playerSelection = prompt("choose rock, paper, or scissors.");
         playRound(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection))
+        
         let roundResult = playRound(playerSelection, computerSelection)
         if(roundResult == "you win!"){
             playerScore++;
@@ -34,12 +33,18 @@ function game(){
         } else {
             null;
         }
-    }  
+        
+    }
+gameEnd(playerScore, computerScore);
+console.log(gameEnd(playerScore, computerScore));
 }
 game();
 console.log(playerScore);
 console.log(computerScore);
-gameEnd(playerScore, computerScore);
+//triggers end of game based on scores.
+
+
+
 function gameEnd(playerScore, computerScore){
     if(playerScore === computerScore){
         return "its a draw!"
