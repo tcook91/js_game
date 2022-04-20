@@ -39,7 +39,7 @@ gameEnd(playerScore, computerScore);
 console.log(gameEnd(playerScore, computerScore));
 }
 game();
-console.log(playerScore);
+ console.log(playerScore);
 console.log(computerScore);
 //triggers end of game based on scores.
 
